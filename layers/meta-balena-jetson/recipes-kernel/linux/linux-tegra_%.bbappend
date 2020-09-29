@@ -34,7 +34,7 @@ SRC_URI_append_jetson-tx2 = " \
 "
 
 SRC_URI_append_cti-rogue-xavier = " \
-    file://tegra194-agx-cti-AGX101.dtb \
+    file://cti-agx101-r32.4.2-linux-tegra-4.9.patch \
 "
 
 SRC_URI_append_astro-tx2 = " \
@@ -292,8 +292,4 @@ do_deploy_append_photon-xavier-nx() {
 
 do_deploy_append_astro-tx2() {
     cp ${WORKDIR}/tegra186-tx2-cti-ASG001-revG+.dtb "${DEPLOYDIR}"
-}
-
-do_deploy_append_cti-rogue-xavier() {
-    cp ${WORKDIR}/tegra194-agx-cti-AGX101.dtb "${DEPLOYDIR}"
 }
